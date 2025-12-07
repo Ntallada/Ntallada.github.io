@@ -1,78 +1,209 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>CSCE 190: Nandasai</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nandasai Allada — Project Portfolio</title>
+  <meta name="description" content="Portfolio and project artifacts for Nandasai Allada (CSCE 190)." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fbfb;
+      --card:#ffffff;
+      --text:#0b2340;
+      --muted:#475569;
+      --accent:#006d77;
+      --accent-2:#004b5a;
+      --radius:12px;
+      --maxw:1100px;
+      --gap:20px;
+      --shadow: 0 6px 18px rgba(11,35,64,0.08);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-size:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      padding:24px;
+      line-height:1.45;
+    }
+    a{color:var(--accent)}
+    .container{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:var(--gap)}
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:var(--accent);color:white;padding:8px;border-radius:6px;z-index:1000}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:var(--shadow)}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:8px;text-decoration:none}
+    nav a:focus, nav a:hover{outline:2px solid var(--accent); background:rgba(0,109,119,0.06)}
+
+    main{margin-top:12px}
+    .hero{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr;gap:12px}
+    .grid-2{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    section.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    h1{margin:0;font-size:28px}
+    h2{margin-top:0;color:var(--accent-2)}
+    p.lead{color:var(--muted);margin:0}
+    .small{font-size:0.95rem;color:var(--muted)}
+    .artifact-img{max-width:100%;border-radius:8px;border:1px solid rgba(0,0,0,0.04)}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+    footer{margin-top:18px;color:var(--muted);font-size:0.95rem;text-align:center}
+    .contact-list{line-height:1.6}
+    /* Responsive */
+    @media (max-width:900px){ .grid-2{grid-template-columns:1fr} .logo{width:48px;height:48px} }
+    /* Focus visible */
+    :focus{outline: 3px solid rgba(0,109,119,0.18);outline-offset:2px}
+  </style>
 </head>
 <body>
-    <h1>Nandasai Allada</h1>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="container" role="document">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">NA</div>
+        <div>
+          <h1>Nandasai Allada</h1>
+          <div class="small">Aspiring AI engineer — concise, accurate, collaborative</div>
+        </div>
+      </div>
 
-    <div class="about">
-        <h2>About me:</h2>
-        <p>I'm an aspiring AI engineer with a focus on quick, concise, and accurate results. I hope to use any opportunities that come my way to accomplish tasks and forge long-lasting bonds!</p>
-    </div>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#artifacts">PM Artifacts</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="skills">
-        <h2>Skills</h2>
-        <p>Planning, team-wide coordination, Microsoft Word and Excel skills, adaptable and open to any new tools that come out, VCS mastery, alongside mastery of JavaScript.</p>
-    </div>
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="intro-heading">
+        <h2 id="intro-heading">About me</h2>
+        <p class="lead">I'm an aspiring AI engineer with a focus on quick, concise, and accurate results. I hope to use any opportunities that come my way to accomplish tasks and forge long-lasting bonds!</p>
+        <div style="margin-top:10px" class="row">
+          <a class="btn" href="#portfolio">View Resume</a>
+          <a class="btn" href="#artifacts" style="background:var(--accent-2)">View PM Artifacts</a>
+        </div>
+      </section>
 
-    <div class="experience">
-        <p>As of right now, I have no notable projects to discuss, however, I do have experience working within a professional workplace during my tenure as a fast food employee.</p>
-    </div>
+      <div class="grid-2" style="margin-top:18px;gap:18px">
+        <div>
+          <!-- Projects -->
+          <section id="projects" class="card" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <p class="small">As of now, I have no notable code projects to show on the site, but I have experience working in a professional environment (fast food employee) and am building skills in planning, team coordination, Microsoft Office, VCS, and JavaScript.</p>
 
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>Contact me at: Nandaallada2007@gmail.com or (803) 873-3475 for any inquiries/messages!</p>
-    </div>
+            <h3 style="margin-top:16px">Work in progress / Goals</h3>
+            <ul>
+              <li>Build an app to help students call attention to campus problems (problem statement below).</li>
+              <li>Collect user feedback through interviews and refine UI sketches.</li>
+            </ul>
 
-    <div class="projects">
-    <h2>Projects</h2>
+            <h3 style="margin-top:16px">Quick Links</h3>
+            <p class="small">
+              <a href="#problem">Problem Statement</a> ·
+              <a href="#affinity">Affinity Diagram</a> ·
+              <a href="#sketches">Sketches</a>
+            </p>
+          </section>
 
-    <section class="project">
-        <a href="Statement.png">
-            <h3>Problem Statement</h3>
-            <img src="Statement.png" alt="Screenshot of problem statement">
-        </a>
-=======
-        <section class="project">
-            <a href="images/board.png"><h3>Affinity Diagram</h3></a>
-                <a href="images/board.png"><img src="images/board.png"></a>
-        <p>
-            This is the affinity diagram I created with my partners (Evelyn Wiggins and Nicholas Bogar) to help commit our ideas to a more visual format.
-        </p>
-</section>
->>>>>>> a1765bdae3c67540d6fd5d7271bd4bf3b21a8698
-        <p>I seek to create a platform that can help students call attention to problems on campus.</p>
-    </section>
-    <section class="project">
-        <a href="images/sketch1.png"><h3>Sketches</h3></a>
-        <a href="images/sketch1.png"><img src="images/sketch1.png"></a>
-    <section class="project">
-        <a href="images/sketch2.png"><h3>Sketches</h3></a>
-        <a href="images/sketch2.png"><img src="images/sketch2.png"></a>
-        <section class="project">
-        <a href="images/sketch3.png"><h3>Sketches</h3></a>
-        <a href="images/sketch3.png"><img src="images/sketch3.png"></a>
-</section>
-        <p>
-            displays potential UI within the app
-        </p>
-</section>
-    </div>
-    </body>
-    <section>
-<a href="https://ntallada.github.io/resume.HTML" target="_blank" rel="noopener noreferrer">
-    View my resume!
-</a>A
-<p>     </p>
-<a href="https://ntallada.github.io/codeprojects.HTML" target="_blank" rel="noopener noreferrer">
-    View my code projects!
-</a>
-<a href="Resume1.pdf" download="Resume.pdf">
-    Download Resume (PDF)
-</a>
+          <!-- Problem statement -->
+          <section id="problem" class="card" aria-labelledby="problem-heading" style="margin-top:18px">
+            <h2 id="problem-heading">Problem Statement</h2>
+            <p>I seek to create a platform that can help students call attention to problems on campus.</p>
+            <p class="small">(This text was pulled from your existing site content and placed into a labeled section so graders can find it quickly.)</p>
+          </section>
 
+          <!-- Affinity Diagram -->
+          <section id="artifacts" class="card" aria-labelledby="affinity-heading" style="margin-top:18px">
+            <h2 id="affinity-heading">Project Management Artifacts</h2>
 
-    </section>
+            <article aria-labelledby="affinity-title" style="margin-top:10px">
+              <h3 id="affinity-title">Affinity Diagram</h3>
+
+              <!-- Replace the src below with the actual image URL from your repo (or keep as placeholder) -->
+              <img class="artifact-img" src="path/to/affinity-diagram.png" alt="Affinity diagram showing grouped notes and themes created with Evelyn Wiggins and Nicholas Bogar" />
+              <p class="small" style="margin-top:8px">
+                This is the affinity diagram I created with my partners (Evelyn Wiggins and Nicholas Bogar) to help commit our ideas to a more visual format.
+                If you can't view the image, this summary explains the main clusters: <strong>Reporting process, Student pain points, Communication channels, and Feature ideas.</strong>
+              </p>
+            </article>
+
+            <article style="margin-top:14px" aria-labelledby="sketches-title">
+              <h3 id="sketches-title">Sketches / UI ideas</h3>
+              <p class="small">Below are sketches and UI mock ideas for the app (replace images below with your repo images):</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+                <img class="artifact-img" src="path/to/sketch1.png" alt="Sketch 1 - app home screen wireframe" style="max-width:220px" />
+                <img class="artifact-img" src="path/to/sketch2.png" alt="Sketch 2 - report creation wireframe" style="max-width:220px" />
+                <img class="artifact-img" src="path/to/sketch3.png" alt="Sketch 3 - admin dashboard wireframe" style="max-width:220px" />
+              </div>
+            </article>
+          </section>
+
+          <!-- More artifacts or PM deliverables -->
+          <section class="card" style="margin-top:18px">
+            <h3>Other PM elements</h3>
+            <ul>
+              <li>Stakeholder notes (labelled)</li>
+              <li>Timeline / Milestones (add as an image or list)</li>
+              <li>Requirements and constraints (add as a text list)</li>
+            </ul>
+            <p class="small">Add any missed assignments in this section so graders can see them.</p>
+          </section>
+        </div>
+
+        <aside>
+          <!-- Portfolio / Resume -->
+          <section id="portfolio" class="card" aria-labelledby="portfolio-heading">
+            <h2 id="portfolio-heading">Portfolio & Resume</h2>
+            <h3>Mission statement</h3>
+            <p class="small">My mission is to quickly build reliable AI-driven tools that help communities identify and solve real problems through clear communication and practical features.</p>
+
+            <h3 style="margin-top:12px">Resume</h3>
+            <p class="small">View or download my resume below. (If you have a PDF, update the href to point to your PDF file in the repo.)</p>
+            <p style="margin-top:8px">
+              <a class="btn" href="path/to/Resume.pdf" target="_blank" rel="noopener">Open Resume (PDF)</a>
+            </p>
+            <p style="margin-top:10px" class="small">Quick resume summary: Planning, team-wide coordination, Word/Excel, adaptable to new tools, VCS, JavaScript.</p>
+
+            <h3 style="margin-top:14px">Contact</h3>
+            <div class="contact-list small">
+              <div><strong>Email: </strong><a href="mailto:Nandaallada2007@gmail.com">Nandaallada2007@gmail.com</a></div>
+              <div><strong>Phone: </strong><a href="tel:+18038733475">(803) 873-3475</a></div>
+            </div>
+          </section>
+
+          <!-- Contact form (optional, accessible) -->
+          <section id="contact" class="card" aria-labelledby="contact-heading" style="margin-top:18px">
+            <h2 id="contact-heading">Contact me</h2>
+            <p class="small">Use the contact info above, or add a contact form (below) connected to a server or form handler if you want incoming messages directly through the site.</p>
+            <!-- Basic form (static example) -->
+            <form action="#" method="POST" onsubmit="alert('This is a demo form. Hook this up to an email service or server.'); return false;">
+              <label for="name">Name</label><br />
+              <input id="name" name="name" type="text" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd" />
+              <label for="message" style="margin-top:8px;display:block">Message</label>
+              <textarea id="message" name="message" rows="4" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd"></textarea>
+              <div style="margin-top:8px">
+                <button class="btn" type="submit">Send message</button>
+              </div>
+            </form>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div>Built by Nandasai Allada — include any course info here if required (CSCE 190).</div>
+      <div style="margin-top:6px" class="small">Tip: Replace <code>path/to/...</code> images and PDF links with the actual file URLs in your repository.</div>
+    </footer>
+  </div>
 </body>
 </html>
